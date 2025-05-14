@@ -1,0 +1,12 @@
+﻿  main.cpp
+C:\Users\Administrator\Desktop\GameProgramming4\Ch1_Generic_Programming\main.cpp(174,33): warning C4244: '인수': 'double'에서 'T1'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              T1=int
+          ]
+C:\Users\Administrator\Desktop\GameProgramming4\Ch1_Generic_Programming\main.cpp(174,28): warning C4244: '인수': 'double'에서 'T1'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              T1=int
+          ]
+  Ch1_Generic_Programming.vcxproj -> C:\Users\Administrator\Desktop\GameProgramming4\GameProgramming4\x64\Debug\Ch1_Generic_Programming.exe
