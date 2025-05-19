@@ -109,7 +109,7 @@ int main()
 	MakeArray<int,10>(aPtr, 0); // aPtr 크기 넘으면 터진다.
 	MakeArray<double, 15>(bPtr, 0.1);
 	MakeArray<string, 10>(cPtr, "owo");
-	MakeArray<Monster, 10>(dPtr, sample);
+	MakeArray<Monster, 5>(dPtr, sample);
 	MakeArray<Monster, 5>(dPtr, pika);
 
 	int input;
