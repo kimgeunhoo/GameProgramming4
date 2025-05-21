@@ -170,6 +170,6 @@ int main()
 
 	//find_test();
 	//find_test2();
-	each_of_test();
+	//each_of_test();
 	all_of_test();
 }
