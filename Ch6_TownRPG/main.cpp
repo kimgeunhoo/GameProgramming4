@@ -12,9 +12,9 @@ int main()
 	Player player(100, 10);
 	Monster monster(80, 5);
 
-	BattleManager battlemanager();
+	BattleManager battlemanager(player, monster);
 
-	battlemanager.Battle(player, monster);
+	battlemanager.Battle();
 	
 	std::cout << "전투가 종료되었습니다." << std::endl;
 }

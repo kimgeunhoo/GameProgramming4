@@ -2,7 +2,7 @@
 
 #include "GameModel.h"
 
-class BattleManager : public Combat
+class BattleManager 
 {
 	// BattleManager battlemanager(player, monster); battleManaget.Battle();
 	Player& player;
@@ -12,7 +12,7 @@ class BattleManager : public Combat
 public:
 	BattleManager(Player& player, Monster& monster) : player(player),  monster(monster) {}
 
-	void Battle(Player& player, Monster& monster)
+	void Battle()
 	{
 		while (player.getHealth() > 0 && monster.getHealth() > 0)
 		{
