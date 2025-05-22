@@ -9,8 +9,8 @@
 
 int main()
 {
-	Player player(100, 10);
-	Monster monster(80, 5);
+	Player player("플레이어", 100, 10);
+	Monster monster("몬스터", 80, 5);
 
 	BattleManager battlemanager(player, monster);
 

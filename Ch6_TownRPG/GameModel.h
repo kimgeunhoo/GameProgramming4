@@ -26,9 +26,9 @@ class Player : public Combat
 private:
 	int health;
 	int ATK;
-
+	std::string name;
 public:
-	Player(int health, int ATK) : health(health), ATK(ATK) {}
+	Player(std::string name, int health, int ATK) : name(name), health(health), ATK(ATK) {}
 
 	void attack(Combat& target) override
 	{
@@ -53,9 +53,9 @@ class Monster : public Combat
 private:
 	int health;
 	int ATK;
-
+	std::string name;
 public:
-	Monster(int health, int ATK) : health(health), ATK(ATK) {}
+	Monster(std::string name, int health, int ATK) : name(name), health(health), ATK(ATK) {}
 	void attack(Combat& target) override
 	{
 		target.takeDamage(ATK);
@@ -64,7 +64,7 @@ public:
 	void takeDamage(int damage) override
 	{
 		health -= damage;
-		std::cout << "Monster가 " << damage << "의 피해를 입었습니다." << std::endl;
+		std::cout << name <<"가 " << damage << "의 피해를 입었습니다." << std::endl;
 	}
 
 	int getHealth() override

@@ -14,6 +14,10 @@ public:
 
 	void Battle()
 	{
+
+
+
+
 		while (player.getHealth() > 0 && monster.getHealth() > 0)
 		{
 			player.attack(monster);
