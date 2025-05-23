@@ -27,12 +27,12 @@
 #include <fstream>
 #include <iostream>
 
-struct Pokemon
-{
-	std::string name;
-
-	LevelExp levelExp;
-};
+//struct Pokemon
+//{
+//	std::string name;
+//
+//	LevelExp levelExp;
+//};
 
 
 struct LevelExp
@@ -66,8 +66,6 @@ public:
 		levelTable.emplace_back(8, 200);
 		levelTable.emplace_back(9, 200);
 	}
-
-	
 
 	int GetMaxExpForLevel(int level)
 	{
@@ -116,7 +114,7 @@ public:
 
 		if (file.is_open())
 		{
-			file << level << " " << exp << std::endl;
+			file << level << " " << exp << " " << maxExp << std::endl;
 			file.close();
 		}
 

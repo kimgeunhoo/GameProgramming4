@@ -2,9 +2,10 @@
 
 #include <iostream>
 #include <vector>
-#include "ConsoleUtility.h"
+//#include "ConsoleUtility.h"
+#include "../UtilityProject/ConsoleUtility.h" // 집 pc가 경로 인식을 못하고 있음.
+/*h"
 
-/*
 	1. DropItem 생성자 만들기
 	2. Monster에 데이터를 받아올 수 있게 Private 필드 선언
 	3. public 레이블에 생성자, vector의 DropTable을 추가하기

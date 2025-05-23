@@ -14,7 +14,6 @@
 int main()
 {
 	Player player(0, 100); // exp 0 level 1 max 100 defaultValue
-
 	Monster monster(0, 0);
 	player.LoadData("player.txt");
 	monster.Drop();
@@ -23,7 +22,7 @@ int main()
 	//data.SaveData("data.txt");
 	data.LoadData("data.txt");
 
-	//std::cout << "dataÀÇ level : " << data.level << " exp : " << data.exp << std::endl;
+	std::cout << "dataÀÇ level : " << data.level << " exp : " << data.exp << std::endl;
 
 
 	_getch();
@@ -36,7 +35,7 @@ int main()
 		player.GetExp(50);
 		player.Show();
 		_getch();
-
+		count++;
 		if (count >= 4)
 		{
 			break;

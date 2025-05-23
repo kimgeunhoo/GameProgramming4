@@ -3,16 +3,25 @@
   "WorkspaceRootPath": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\GameProgramming4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96A8ECEE-C906-4796-A69F-94CC8EDB5D22}|..\\Ch6_TownRPG\\Ch6_TownRPG.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A276F72D-0544-45D0-B7A9-5905FE1FB2E0}|..\\Ch7_DataLoadAndSave\\Ch7_DataLoadAndSave.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A8ECEE-C906-4796-A69F-94CC8EDB5D22}|..\\Ch6_TownRPG\\Ch6_TownRPG.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\BattleManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A276F72D-0544-45D0-B7A9-5905FE1FB2E0}|..\\Ch7_DataLoadAndSave\\Ch7_DataLoadAndSave.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\GameModel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A8ECEE-C906-4796-A69F-94CC8EDB5D22}|..\\Ch6_TownRPG\\Ch6_TownRPG.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\GameModel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A276F72D-0544-45D0-B7A9-5905FE1FB2E0}|..\\Ch7_DataLoadAndSave\\Ch7_DataLoadAndSave.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\DataHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31859484-985C-4E47-A9E4-9207D6BD1082}|..\\Ch5_STL\\Ch5_STL.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A276F72D-0544-45D0-B7A9-5905FE1FB2E0}|..\\Ch7_DataLoadAndSave\\Ch7_DataLoadAndSave.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\DropTable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB3A1DA8-B5DA-4735-81C7-8EF0FDB2709B}|..\\UtilityProject\\UtilityProject.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\ConsoleUtility.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3651BBF7-22DA-485F-86E2-D9F1086673C9}|..\\Ch2_ConsoleGame_GenericExample\\Ch2_ConsoleGame_GenericExample.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch2_ConsoleGame_GenericExample\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE5F676B-7D9A-4B02-A5BD-52FD54E2A207}|..\\Ch3_vector\\Ch3_vector.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch3_vector\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31859484-985C-4E47-A9E4-9207D6BD1082}|..\\Ch5_STL\\Ch5_STL.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\MonsterDatabase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -21,19 +30,7 @@
       "AbsoluteMoniker": "D:0:0:{31859484-985C-4E47-A9E4-9207D6BD1082}|..\\Ch5_STL\\Ch5_STL.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\algo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB3A1DA8-B5DA-4735-81C7-8EF0FDB2709B}|..\\UtilityProject\\UtilityProject.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54C670AA-9EB2-4A66-AA69-FC5592B83761}|..\\Ch4_MyVector\\Ch4_MyVector.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54C670AA-9EB2-4A66-AA69-FC5592B83761}|..\\Ch4_MyVector\\Ch4_MyVector.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\RandomEncount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54C670AA-9EB2-4A66-AA69-FC5592B83761}|..\\Ch4_MyVector\\Ch4_MyVector.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\CustomVector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB3A1DA8-B5DA-4735-81C7-8EF0FDB2709B}|..\\UtilityProject\\UtilityProject.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\ConsoleUtility.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{31859484-985C-4E47-A9E4-9207D6BD1082}|..\\Ch5_STL\\Ch5_STL.vcxproj|C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,144 +40,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 225,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\main.cpp",
-              "RelativeDocumentMoniker": "..\\Ch6_TownRPG\\main.cpp",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\main.cpp*",
-              "RelativeToolTip": "..\\Ch6_TownRPG\\main.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-21T13:57:31.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BattleManager.h",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\BattleManager.h",
-              "RelativeDocumentMoniker": "..\\Ch6_TownRPG\\BattleManager.h",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\BattleManager.h*",
-              "RelativeToolTip": "..\\Ch6_TownRPG\\BattleManager.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-21T13:57:15.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameModel.h",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\GameModel.h",
-              "RelativeDocumentMoniker": "..\\Ch6_TownRPG\\GameModel.h",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch6_TownRPG\\GameModel.h",
-              "RelativeToolTip": "..\\Ch6_TownRPG\\GameModel.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-21T13:57:11.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MonsterDatabase.h",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\MonsterDatabase.h",
-              "RelativeDocumentMoniker": "..\\Ch5_STL\\MonsterDatabase.h",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\MonsterDatabase.h",
-              "RelativeToolTip": "..\\Ch5_STL\\MonsterDatabase.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-20T08:43:18.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\main.cpp",
-              "RelativeDocumentMoniker": "..\\UtilityProject\\main.cpp",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\main.cpp",
-              "RelativeToolTip": "..\\UtilityProject\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-20T08:42:28.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "algo.h",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\algo.h",
-              "RelativeDocumentMoniker": "..\\Ch5_STL\\algo.h",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\algo.h",
-              "RelativeToolTip": "..\\Ch5_STL\\algo.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-20T08:04:54.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\main.cpp",
-              "RelativeDocumentMoniker": "..\\Ch5_STL\\main.cpp",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\main.cpp",
-              "RelativeToolTip": "..\\Ch5_STL\\main.cpp",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAAAKAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-20T07:02:23.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RandomEncount.h",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\RandomEncount.h",
-              "RelativeDocumentMoniker": "..\\Ch4_MyVector\\RandomEncount.h",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\RandomEncount.h",
-              "RelativeToolTip": "..\\Ch4_MyVector\\RandomEncount.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-20T07:01:31.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CustomVector.h",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\CustomVector.h",
-              "RelativeDocumentMoniker": "..\\Ch4_MyVector\\CustomVector.h",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\CustomVector.h",
-              "RelativeToolTip": "..\\Ch4_MyVector\\CustomVector.h",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAIMAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-20T07:01:32.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\main.cpp",
-              "RelativeDocumentMoniker": "..\\Ch4_MyVector\\main.cpp",
-              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch4_MyVector\\main.cpp",
-              "RelativeToolTip": "..\\Ch4_MyVector\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-20T07:01:32.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "ConsoleUtility.h",
               "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\ConsoleUtility.h",
               "RelativeDocumentMoniker": "..\\UtilityProject\\ConsoleUtility.h",
               "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\UtilityProject\\ConsoleUtility.h",
               "RelativeToolTip": "..\\UtilityProject\\ConsoleUtility.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxwAAABBAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-20T07:01:32.306Z"
+              "WhenOpened": "2025-05-22T15:15:25.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataHandler.h",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\DataHandler.h",
+              "RelativeDocumentMoniker": "..\\Ch7_DataLoadAndSave\\DataHandler.h",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\DataHandler.h",
+              "RelativeToolTip": "..\\Ch7_DataLoadAndSave\\DataHandler.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T15:10:37.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameModel.h",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\GameModel.h",
+              "RelativeDocumentMoniker": "..\\Ch7_DataLoadAndSave\\GameModel.h",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\GameModel.h",
+              "RelativeToolTip": "..\\Ch7_DataLoadAndSave\\GameModel.h",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAawGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T15:13:41.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Ch7_DataLoadAndSave\\main.cpp",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\main.cpp",
+              "RelativeToolTip": "..\\Ch7_DataLoadAndSave\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T15:13:38.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DropTable.h",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\DropTable.h",
+              "RelativeDocumentMoniker": "..\\Ch7_DataLoadAndSave\\DropTable.h",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch7_DataLoadAndSave\\DropTable.h",
+              "RelativeToolTip": "..\\Ch7_DataLoadAndSave\\DropTable.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAswEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T15:12:03.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch2_ConsoleGame_GenericExample\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Ch2_ConsoleGame_GenericExample\\main.cpp",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch2_ConsoleGame_GenericExample\\main.cpp",
+              "RelativeToolTip": "..\\Ch2_ConsoleGame_GenericExample\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T15:10:31.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch3_vector\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Ch3_vector\\main.cpp",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch3_vector\\main.cpp",
+              "RelativeToolTip": "..\\Ch3_vector\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T15:10:26.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MonsterDatabase.h",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\MonsterDatabase.h",
+              "RelativeDocumentMoniker": "..\\Ch5_STL\\MonsterDatabase.h",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\MonsterDatabase.h",
+              "RelativeToolTip": "..\\Ch5_STL\\MonsterDatabase.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T15:10:12.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "algo.h",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\algo.h",
+              "RelativeDocumentMoniker": "..\\Ch5_STL\\algo.h",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\algo.h",
+              "RelativeToolTip": "..\\Ch5_STL\\algo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T15:10:10.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Ch5_STL\\main.cpp",
+              "ToolTip": "C:\\Users\\bungj\\Desktop\\GameProgramming4\\Ch5_STL\\main.cpp",
+              "RelativeToolTip": "..\\Ch5_STL\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T15:10:07.267Z"
             }
           ]
         }
