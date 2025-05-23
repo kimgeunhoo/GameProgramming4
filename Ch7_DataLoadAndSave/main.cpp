@@ -35,6 +35,7 @@ int main()
 		player.GetExp(50);
 		player.Show();
 		_getch();
+
 		count++;
 		if (count >= 4)
 		{
