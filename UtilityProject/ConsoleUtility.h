@@ -1,7 +1,9 @@
 #pragma once
 
+#include <chrono>
 #include <random>
 #include "Windows.h"
+
 
 
 class ConsoleUtil
@@ -27,5 +29,17 @@ public:
 		cursor.dwSize = 1;
 		cursor.bVisible = 0;
 		SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursor);
+	}
+
+	static void TimeCheck(void (*Func)())
+	{
+		auto start = std::chrono::high_resolution_clock::now();
+
+		// 함수 포인터
+		Func();			
+
+		auto end = std::chrono::high_resolution_clock::now();
+		std::chrono::duration<double, std::milli> duration = end - start;
+		std::cout << duration.count() << " ms 시간이 걸렸습니다." << std::endl;
 	}
 };
