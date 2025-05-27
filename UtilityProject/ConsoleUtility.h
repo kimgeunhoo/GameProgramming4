@@ -3,7 +3,7 @@
 #include <chrono>
 #include <random>
 #include "Windows.h"
-
+#include <iostream>
 
 
 class ConsoleUtil
