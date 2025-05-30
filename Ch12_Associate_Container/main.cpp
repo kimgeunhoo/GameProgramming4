@@ -300,7 +300,7 @@ public:
 	void ShowItem()
 	{
 		std::cout << std::left;
-		std::cout << std::setw(10) << "인덱스" << std::setw(10) 
+		std::cout << std::setw(10) << "인덱스" << std::setw(20) 
 			<< "이름" << std::setw(10) << "공격력" << std::setw(10) << "가격" << std::endl;
 
 		for (const auto& item : items) 
