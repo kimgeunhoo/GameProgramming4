@@ -18,16 +18,16 @@
 #include <fstream> // ifsteram ofstream input output
 #include <iomanip> // 입출력 조작 헤더
 #include <utility>
-
-
+#include <string>
 const int total_width = 60;		// 전체
 const int field1_width = 30;	// 이름 길이
 const int field2_width = 15;	// 가격
 const int field3_width = 15;	// 타입
 
-#pragma region 상점 코드
 
-class Item 
+#pragma region Player 코드
+
+class Item
 {
 public:
 	std::string name;
@@ -40,6 +40,58 @@ public:
 	// 원래는 보안상 이게 맞음
 	// std::string Getname() { return name } const;
 };
+
+
+// 좌표
+// 돈	<< 
+
+// Shop코드와 연동 하여... money,  Shop.items[i].price 비교   money -= price;
+// 인벤토리 (어떤 컨테이너를 선택하면 좋을까?)	shop-> player.inventory
+
+// 현재 플레이어가 가지고 있느 ㄴ아이템 정보를 저장. LEVEL
+// 게임 종료
+
+class Player
+{
+public:
+	int posX, posY, money;
+	Item item;
+	// (1) 플레이어가 소유한 인벤토리를 자료구조를 한가지 선택해서 그 자료구조에 구매한 아이템을 저장해보기
+	// (2) 저장한 자료구조를 사용하는 함수를 만들기
+
+	Player() = default;
+	Player(int posX, int posY, int money) : posX(posX), posY(posY), money(money), item(item) {}
+
+	// 좌상단에 플레리어 UI 띄우기.
+
+	void ShowPlayerUI()
+	{
+		ConsoleUtil::GotoXY(70, 5);
+		std::cout << "플레이어의 정보";
+		ConsoleUtil::GotoXY(70, 6);
+		std::cout << "돈 : " << money;
+		ConsoleUtil::GotoXY(70, 7);
+		// (2) 보유 아이템....
+		std::cout << "보유 아이템";
+		ConsoleUtil::GotoXY(70, 8);
+	}
+
+	void BuyItem(Item& item)
+	{
+		money -= item.price;
+		std::vector<Item> userItem;
+		//	vector.push_back(item);;
+		//	map.insert(?, item);	// 아이템의 이름으로 검색할 수 있게 map<string, item>
+		//	unordered_map<string, item>
+	}
+
+};
+
+
+#pragma endregion
+
+#pragma region 상점 코드
+
 
 class Shop
 {
@@ -127,27 +179,33 @@ public:
 
 
 	// 데이터를 사용하여 기능을 구현한다.
-	void ShowItems()
+	void ShowItems(int x, int y)
 	{
 		//std::string headersize = "012345678901234567890123456789012345678901234567890123456789";
 		// 아이템의 머릿말
 		//std::cout << headersize << std::endl;
 
+		ConsoleUtil::GotoXY(x, y);
+
 		std::cout << std::setw(field1_width) << std::left << "이름"
 			<< std::setw(field2_width) << std::right << "가격"
 			<< std::setw(field3_width) << std::right << "타입"
 			<< std::endl;
+
+		ConsoleUtil::GotoXY(x, y + 1);
 		// 라인 긋는 코드
 		std::cout << std::setw(total_width)		// 길이 성정
 			<< std::setfill('-')				// 공백 '-' 설정
 			<< ""								// 길이 설정2
 			<< std::endl;
 		
+
 		std::cout << std::setfill(' ');			// 라인 기존 설정으로
 		// 아이템을 출력하라
 		// const auto & elem : items 도 가능  // 인덱스 기반이 아니라면 이것을 사용
 		for (int i = 0; i < items.size() - 1; i++) // 인덱스 기반 접근이 가능한 자료구조여야만 한다. vector, map.
 		{
+			ConsoleUtil::GotoXY(x, y + 2 + i);
 			std::cout << std::setw(field1_width) << std::left << items[i].name
 				<< std::setw(field2_width) << std::right << items[i].price
 				<< std::setw(field3_width) << std::right << items[i].type
@@ -157,11 +215,45 @@ public:
 
 	}
 
-	// 아이템을 판매한다.
+	// 아이템을 판매한다. (플레이어가 돈이 없으면...)
+	bool BuyItem(int index, Player& player)
+	{
+		if (items.find(index) != items.end()) // 해당하는 아이템을 찾았다.
+		{
+			Item itemInstance = items[index];
+			if (player.money >= itemInstance.price) // 플레이어가 소지금이 충분할 때
+			{
+				player.BuyItem(itemInstance);
+				return true;
+			}
+			else
+			{
+				std::cout << "소지금이 부족합니다" << std::endl;
+			}
+		}
+		else
+		{
+			std::cout << "아이템을 찾지 못했습니다." << std::endl;
+		}
+
+	}
+
+	void Interact(Player& player)
+	{
+		int select;
+		std::cout << "번호를 입력하여 아이템을 구매할 수 있습니다." << std::endl;
+
+		std::cin >> select;
+
+		BuyItem(select, player);
+		
+	}
 
 };
 
 #pragma endregion
+
+
 
 #pragma region NPC 코드
 // 상인이 존재하는 위치에 플레이어가 도달했을때 출력
@@ -174,56 +266,54 @@ public:
 	// 원래는 private 해서 Get 해야함
 	int posX;
 	int posY;
+	bool isActivate;
 
 	NPC() = default;
-	NPC(std::string filename, int posX, int posY) : posX(posX), posY(posY)
+	NPC(std::string filename, int posX, int posY) : posX(posX), posY(posY), isActivate(true)
 	{
 		shop = Shop(filename);
 	}
 
-	void ShowItem()
+	void ShowItem(int x, int y)
 	{
-		shop.ShowItems();
+		shop.ShowItems(x, y);
+	}
+
+	void Interact(Player& player)
+	{
+		shop.Interact(player);
+		isActivate = false;
 	}
 
 	void ShowNPC()
 	{
+		if (isActivate == false) return;
+
 		ConsoleUtil::GotoXY(posX, posY);
 		std::cout << "$";
 	}
 };
 
-void Interact(int x1, int y1, NPC& npc) // Player, NPC
+void Interact(Player& player, NPC& npc, int UI_X, int UI_Y) // Player, NPC
 {
-	if (x1 == npc.posX && y1 == npc.posY)
+	if (player.posX == npc.posX && player.posY == npc.posY)
 	{
-		npc.ShowItem();
+		// npc.isActivate == false 
+		if (!npc.isActivate) { return; } // 상점이 비활성화 되면 사용 불가
+
+		npc.ShowItem(UI_X, UI_Y);
+		npc.Interact(player);
 	}
 }
 
-void ShowPhase(Shop& shop)
+void ShowPhase(Player& player, Shop& shop)
 {
-	shop.ShowItems();
+	shop.ShowItems(player.posX, player.posY);
 }
 
 #pragma endregion
 
-#pragma region Player 코드
 
-class Player
-{
-	// 좌표
-	// 돈	<< 
-
-	// Shop코드와 연동 하여... money,  Shop.items[i].price 비교   money -= price;
-	// 인벤토리 (어떤 컨테이너를 선택하면 좋을까?)	shop-> player.inventory
-
-	// 현재 플레이어가 가지고 있느 ㄴ아이템 정보를 저장. LEVEL
-	// 게임 종료
-};
-
-
-#pragma endregion
 
 
 
@@ -231,8 +321,10 @@ int main()
 {
 	ConsoleUtil::setCursorVisible(false);
 
-	int playerX = 10;
-	int playerY = 10;
+	Player player(10, 10, 1000);	// 플레이어의 시작 설정
+
+	/*int playerX = 10;
+	int playerY = 10;*/
 
 	//상점 랜덤 출력이 필요할 때
 	//int randnum = 0;
@@ -258,36 +350,38 @@ int main()
 
 			if (GetAsyncKeyState(VK_UP))
 			{
-				if (playerY <= 0) { playerY = 0; }
-				else { playerY--; }
+				if (player.posY <= 0) { player.posY = 0; }
+				else { player.posY--; }
 				
 			}
 			if (GetAsyncKeyState(VK_DOWN))
 			{
-				playerY++;
+				player.posY++;
 			}
 			if (GetAsyncKeyState(VK_LEFT))
 			{
-				if (playerX <= 0) { playerX = 0; }
-				else { playerX--;}
+				if (player.posX <= 0) { player.posX = 0; }
+				else { player.posX--;}
 				
 			}
 			if (GetAsyncKeyState(VK_RIGHT))
 			{
-				playerX++;
+				player.posX++;
 			}
 		}
+
+		player.ShowPlayerUI();
 
 		npc1.ShowNPC();
 		npc2.ShowNPC();
 		npc3.ShowNPC();
 
-		Interact(playerX, playerY, npc1);
-		Interact(playerX, playerY, npc2);
-		Interact(playerX, playerY, npc3);
+		Interact(player, npc1, 0, 10);
+		Interact(player, npc2, 0, 10);
+		Interact(player, npc3, 0, 10);
 
 	//	shop.ShowItems();
-		ConsoleUtil::GotoXY(playerX, playerY);
+		ConsoleUtil::GotoXY(player.posX, player.posY);
 		std::cout << "a";
 
 		_getch();
