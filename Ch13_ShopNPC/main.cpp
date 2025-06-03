@@ -19,16 +19,19 @@
 #include <iomanip> // 입출력 조작 헤더
 #include <utility>
 #include <string>
+#include <unordered_map>
+
 const int total_width = 60;		// 전체
 const int field1_width = 30;	// 이름 길이
 const int field2_width = 15;	// 가격
 const int field3_width = 15;	// 타입
 
 
-#pragma region Player 코드
+
 
 class Item
 {
+
 public:
 	std::string name;
 	int price;
@@ -39,8 +42,36 @@ public:
 
 	// 원래는 보안상 이게 맞음
 	// std::string Getname() { return name } const;
+
+	virtual void Use() = 0; // 순수 가상 함수: Item을 상속하는 클래스가 이 함수를 반드시 구현을 하시오.
 };
 
+class Weapon : public Item
+{
+public:
+	Weapon(std::string name, int price, std::string type) : Item(name, price, type) {}
+
+	void Use() override
+	{
+		std::cout << "무기를 사용합니다." << std::endl;
+	}
+};
+
+/// <summary>
+/// 아이템을 Use했을 때 사라지는 종류의 아이템
+/// Player 클래스의 RemoveItem을 사용.
+/// </summary>
+class UseableItem : public Item
+{
+public:
+	UseableItem(std::string name, int price, std::string type) : Item(name, price, type) {}
+
+	void Use() override
+	{
+		std::cout << "소비성 아이템을 사용합니다." << std::endl;
+		// Remove 되는 아이템을 호출
+	}
+};
 
 // 좌표
 // 돈	<< 
@@ -48,19 +79,71 @@ public:
 // Shop코드와 연동 하여... money,  Shop.items[i].price 비교   money -= price;
 // 인벤토리 (어떤 컨테이너를 선택하면 좋을까?)	shop-> player.inventory
 
-// 현재 플레이어가 가지고 있느 ㄴ아이템 정보를 저장. LEVEL
+// 현재 플레이어가 가지고 있는 아이템 정보를 저장. LEVEL
 // 게임 종료
-
+#pragma region Player 코드
 class Player
 {
+
+private:
+	//Item items[100]; 다음 코드의 문제점. 1억 100 1억 - 100 vector ??
+	std::unordered_map<std::string, Item*> inventory; // Item을 아이템의 이름으로 찾는 컨테이너
+
 public:
 	int posX, posY, money;
-	Item item;
+
+	
+#pragma region 인벤토리 코드
 	// (1) 플레이어가 소유한 인벤토리를 자료구조를 한가지 선택해서 그 자료구조에 구매한 아이템을 저장해보기
 	// (2) 저장한 자료구조를 사용하는 함수를 만들기
 
+	void AddItem(Item* item)
+	{
+		inventory.insert({ item->name, item }); 
+	}
+
+	void RemoveItem(std::string name)
+	{
+		// 제거할 수 없는 경우에는?
+
+		if (inventory.find(name) != inventory.end()) // 컨테이너 데이터가 존재할 때만 실행
+		{
+			inventory.erase(name);
+		}
+		else {
+			std::cout << "인벤토리에 해당 아이템이 존재하지 않습니다." << std::endl;
+		}
+
+		inventory.erase(name);
+	}	
+
+	void RemoveItem(Item* item)
+	{
+		inventory.erase(item->name);
+	}
+
+/*
+	상점은 전부 다 아이템을 팔아야 한다. (공통된 클래스 -> item)
+	해당 아이템 같은 함수 Use() 갖고 있지만 다른 기능으로 사용하고 싶다. (클래스의 다형성)
+	Item을 주소로 받아오면, 다형성을 사용할 수 있다.	
+*/
+
+	// 특정 키를 눌렀을 때 (게임 입력 Player Input)
+
+	// PushOne 함수 포인터 PushOne();
+
+	void Use(Item* item)
+	{
+		// 소비 아이템 -> 회복...
+		// 장비 아이템 -> 장비 장착...
+		item->Use();
+
+	}
+
+#pragma endregion
+
 	Player() = default;
-	Player(int posX, int posY, int money) : posX(posX), posY(posY), money(money), item(item) {}
+	Player(int posX, int posY, int money) : posX(posX), posY(posY), money(money) {}
 
 	// 좌상단에 플레리어 UI 띄우기.
 
@@ -74,12 +157,18 @@ public:
 		// (2) 보유 아이템....
 		std::cout << "보유 아이템";
 		ConsoleUtil::GotoXY(70, 8);
+		for (const auto& item : inventory) 
+		{
+			std::cout << item.first << " ";
+		}
 	}
 
-	void BuyItem(Item& item)
+	void BuyItem(Item* item)
 	{
-		money -= item.price;
-		std::vector<Item> userItem;
+		money -= item->price;
+		AddItem(item);
+		//Use(item); // 사용 테스트
+
 		//	vector.push_back(item);;
 		//	map.insert(?, item);	// 아이템의 이름으로 검색할 수 있게 map<string, item>
 		//	unordered_map<string, item>
@@ -96,19 +185,25 @@ public:
 class Shop
 {
 private:
-	std::map<int, Item> items;	// 자료구조 클래스를 보관한다.
+	/*
+		Item 추상 클래스 만들면 item 자체를 클래스로 생성할 수 없다.
+		주소로 받아와야 하는데, enum 타입에 따라 클래스를 다르게 사용하게끔 코드를 작성해야 한다.
+		"팩토리 패턴" - 팩토리 클래스를 만들어서 생성자를 다르게 구현할 수 있다.
+	*/
+
+	std::map<int, Item*> items;	// 자료구조 클래스를 보관한다.
 
 public:	
 	Shop()	// 데이터를 초기화한다.
 	{
 		// 3가지 insert 방식
-		items.insert({ 0, Item("롱소드", 100, "무기") });
-		items.insert(std::make_pair(1, Item("체력포션", 5, "소비")));
-		std::pair<int, Item> p1(2, Item("나무방패", 50, "무기"));
+		items.insert({ 0, new Weapon("롱소드", 100, "무기") });
+		items.insert(std::make_pair(1, new UseableItem("체력포션", 5, "소비")));
+		std::pair<int, Item*> p1(2, new Weapon("나무방패", 50, "무기"));
 		items.insert(p1);
 		// 추가하거나 제거해서 종류별로 상점 만드는 것도 가능하다.
-		items.insert({ 3, Item("대검", 200, "무기") });
-		items.insert({ 4, Item("스피어", 150, "무기") });
+		items.insert({ 3, new Weapon("대검", 200, "무기") });
+		items.insert({ 4, new Weapon("스피어", 150, "무기") });
 		//items.insert({ 5, Item("엘릭서", 50, "소비") });
 		//items.insert({ 6, Item("철갑옷", 200, "갑옷") });
 		//items.insert({ 7, Item("가죽갑옷", 100, "갑옷") });
@@ -142,8 +237,22 @@ public:
 		while (!in_file.eof()) // end of file (파일의 끝에 도달했을 떄)
 		{
 			in_file >> name >> price >> type;					// 파일에서 name, price type 읽기
-			items.insert({index, Item(name, price, type) });	// map 자료구조에 저장
-			index++;											// 다음 index 넘어가기
+			
+			if (type == "무기")
+			{
+				items.insert({index, new Weapon(name, price, type) });	// 무기라면 무기 아이템으로 저장
+				index++;
+			}
+			else if (type == "소비")
+			{
+				items.insert({index, new UseableItem(name, price, type) });	// 소비 아이템이라면 소비 아이템으로 저장
+				index++;
+			}
+			else if (type == "갑옷")
+			{
+				items.insert({ index, new Weapon(name, price, type) });	// 소비 아이템이라면 소비 아이템으로 저장
+				index++;
+			}
 		}
 		
 
@@ -168,9 +277,9 @@ public:
 
 		for (int i = 0; i < items.size(); i++) // 인덱스 기반 접근이 가능한 자료구조여야만 한다. vector, map.
 		{
-			out_file << std::setw(field1_width) << std::left << items[i].name
-				<< std::setw(field2_width) << std::right << items[i].price
-				<< std::setw(field3_width) << std::right << items[i].type
+			out_file << std::setw(field1_width) << std::left << items[i]->name
+				<< std::setw(field2_width) << std::right << items[i]->price
+				<< std::setw(field3_width) << std::right << items[i]->type
 				<< std::endl;
 		}
 
@@ -206,9 +315,9 @@ public:
 		for (int i = 0; i < items.size() - 1; i++) // 인덱스 기반 접근이 가능한 자료구조여야만 한다. vector, map.
 		{
 			ConsoleUtil::GotoXY(x, y + 2 + i);
-			std::cout << std::setw(field1_width) << std::left << items[i].name
-				<< std::setw(field2_width) << std::right << items[i].price
-				<< std::setw(field3_width) << std::right << items[i].type
+			std::cout << std::setw(field1_width) << std::left << items[i]->name
+				<< std::setw(field2_width) << std::right << items[i]->price
+				<< std::setw(field3_width) << std::right << items[i]->type
 				<< std::endl;
 		}
 
@@ -220,8 +329,10 @@ public:
 	{
 		if (items.find(index) != items.end()) // 해당하는 아이템을 찾았다.
 		{
-			Item itemInstance = items[index];
-			if (player.money >= itemInstance.price) // 플레이어가 소지금이 충분할 때
+			
+
+			Item* itemInstance = items[index];
+			if (player.money >= itemInstance->price) // 플레이어가 소지금이 충분할 때
 			{
 				player.BuyItem(itemInstance);
 				return true;
