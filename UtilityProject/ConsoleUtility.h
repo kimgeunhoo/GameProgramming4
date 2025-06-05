@@ -42,4 +42,18 @@ public:
 		std::chrono::duration<double, std::milli> duration = end - start;
 		std::cout << duration.count() << " ms 시간이 걸렸습니다." << std::endl;
 	}
+
+	void SetWindowSize(int cols, int lines)
+	{
+		system("title PacManX");
+		char cmd[30];
+		sprintf_s(cmd, "mode con cols=%d lines=%d", cols, lines);
+		system(cmd);
+	}
+
+	void SetColor(int colorID)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colorID);
+	}
+
 };
